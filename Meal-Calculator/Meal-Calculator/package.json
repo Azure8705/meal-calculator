@@ -1,0 +1,10 @@
+{
+  "name": "Meal-Calculator",
+  "version": "0.0.0",
+  "description": "Meal-Calculator",
+  "main": "server.js",
+  "author": {
+    "name": "AzureSky",
+    "email": ""
+  }
+}
