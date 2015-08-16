@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">The Diner</h1>
+        <div class="col-md-12 text-center">
+            <h1>The Diner</h1>
         </div>
     </div>
 
@@ -9,15 +9,27 @@
         <div id="diner-col-left" class="col-md-6">
             <div id="diner-appetizer">
                 <h2>Appetizers</h2>
+                <ul>
+                    <li ng-repeat="menuItem in menu | filter: {category: 'appetizer'}" >{{menuItem.name}}</li>
+                </ul>
             </div> <!--End diner appetizer-->
             <div id="diner-mains">
                 <h2>Main Course</h2>
+                <ul>
+                    <li ng-repeat="menuItem in menu | filter: {category: 'mainCourse'}">{{menuItem.name}}</li>
+                </ul>
             </div><!--End diner mains-->
             <div id="diner-dessert">
                 <h2>Desserts</h2>
+                <ul>
+                    <li ng-repeat="menuItem in menu | filter: {category: 'dessert'}">{{menuItem.name}}</li>
+                </ul>
             </div><!--End diner dessert-->
             <div id="diner-drinks">
                 <h2>Drinks</h2>
+                <ul>
+                    <li ng-repeat="menuItem in menu | filter: {category: 'drink'}">{{menuItem.name}}</li>
+                </ul>
             </div><!-- End diner drinks-->
         </div> <!-- End diner col left-->
         <div id="diner-col-right" class="col-md-6">

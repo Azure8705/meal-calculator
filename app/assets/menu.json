@@ -1,0 +1,52 @@
+﻿[
+  {
+    "name": "Calamari",
+    "price": 5,
+    "category": "appetizer"
+  },
+  {
+    "name": "Jalapeno Poppers",
+    "price": 5,
+    "category": "appetizer"
+  },
+  {
+    "name": "Buffalo Wings",
+    "price": 5,
+    "category": "appetizer"
+  },
+  {
+    "name": "Beef Tenderloin",
+    "price": 5,
+    "category": "mainCourse"
+  }, 
+  {
+    "name": "Brownie",
+    "price": 5,
+    "category": "dessert"
+  }, 
+  {
+    "name": "Pork Chop",
+    "price": 5,
+    "category": "mainCourse"
+  }, 
+  {
+    "name": "Martini",
+    "price": 5,
+    "category": "drink"
+  }, 
+  {
+    "name": "Ice Cream",
+    "price": 5,
+    "category": "dessert"
+  }, 
+  {
+    "name": "Beer",
+    "price": 5,
+    "category": "drink"
+  }, 
+  {
+    "name": "Wine",
+    "price": 5,
+    "category": "drink"
+  }
+]

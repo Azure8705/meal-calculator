@@ -8,10 +8,9 @@
  * Controller of the mealCalcApp
  */
 angular.module('mealCalcApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $http) {
+      $http.get('assets/menu.json').success(function (data) {
+          $scope.menu = data;
+      });
+
   });
