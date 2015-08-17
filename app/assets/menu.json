@@ -1,7 +1,7 @@
 ﻿[
   {
     "name": "Calamari",
-    "price": 5,
+    "price": 8,
     "category": "appetizer"
   },
   {
@@ -11,22 +11,22 @@
   },
   {
     "name": "Buffalo Wings",
-    "price": 5,
+    "price": 7,
     "category": "appetizer"
   },
   {
     "name": "Beef Tenderloin",
-    "price": 5,
+    "price": 15,
     "category": "mainCourse"
   }, 
   {
     "name": "Brownie",
-    "price": 5,
+    "price": 4,
     "category": "dessert"
   }, 
   {
     "name": "Pork Chop",
-    "price": 5,
+    "price": 12,
     "category": "mainCourse"
   }, 
   {
@@ -36,7 +36,7 @@
   }, 
   {
     "name": "Ice Cream",
-    "price": 5,
+    "price": 4,
     "category": "dessert"
   }, 
   {
@@ -46,7 +46,7 @@
   }, 
   {
     "name": "Wine",
-    "price": 5,
+    "price": 6,
     "category": "drink"
   }
 ]
