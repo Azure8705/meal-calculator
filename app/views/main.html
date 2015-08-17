@@ -13,7 +13,11 @@
                     <tr ng-repeat="menuItem in menu | filter: {category: 'appetizer'}">
                         <td class="col-md-6">{{menuItem.name}}</td>
                         <td class="col-md-3">{{menuItem.price | currency: "$"}}</td>
-                        <td class="col-md-3"><button type="submit" value="Add">Add</button></td>
+                        <td class="col-md-3">
+                            <form>
+                                <input type="button" value="Add" ng-click="addToOrder(menuItem)" />
+                            </form>
+                        </td>
                     </tr>
                 </table>
             </div> <!--End diner appetizer-->
@@ -23,7 +27,11 @@
                     <tr ng-repeat="menuItem in menu | filter: {category: 'mainCourse'}">
                         <td class="col-md-6">{{menuItem.name}}</td>
                         <td class="col-md-3">{{menuItem.price | currency: "$"}}</td>
-                        <td class="col-md-3"><button type="submit" value="Add">Add</button></td>
+                        <td class="col-md-3">
+                            <form>
+                                <input type="button" value="Add" ng-click="addToOrder(menuItem)" />
+                            </form>
+                        </td>
                     </tr>
                 </table>
             </div><!--End diner mains-->
@@ -33,7 +41,11 @@
                     <tr ng-repeat="menuItem in menu | filter: {category: 'dessert'}">
                         <td class="col-md-6">{{menuItem.name}}</td>
                         <td class="col-md-3">{{menuItem.price | currency: "$"}}</td>
-                        <td class="col-md-3"><button type="submit" value="Add">Add</button></td>
+                        <td class="col-md-3">
+                            <form>
+                                <input type="button" value="Add" ng-click="addToOrder(menuItem)" />
+                            </form>
+                        </td>
                     </tr>
                 </table>
             </div><!--End diner dessert-->
@@ -43,7 +55,11 @@
                     <tr ng-repeat="menuItem in menu | filter: {category: 'drink'}">
                         <td class="col-md-6">{{menuItem.name}}</td>
                         <td class="col-md-3">{{menuItem.price | currency: "$"}}</td>
-                        <td class="col-md-3"><button type="submit" value="Add">Add</button></td>
+                        <td class="col-md-3">
+                            <form> 
+                                <input type="button" value="Add" ng-click="addToOrder(menuItem)" />
+                            </form>
+                        </td>
                     </tr>
                 </table>
             </div><!-- End diner drinks-->
@@ -51,24 +67,31 @@
         <div id="diner-col-right" class="col-md-6">
             <div id="diner-patron">
                 <h3 class="text-center">Order</h3>
+                <table class="table">
+                    <tr ng-repeat="orderItem in myOrder track by $index">
+                        <td class="col-md-6">{{orderItem.name}}</td>
+                        <td class="col-md-3">{{orderItem.price | currency: "$"}}</td>
+                        <td class="col-md-3"><input type="button" value="Remove" ng-click="removeFromOrder(orderItem)" /></td>
+                    </tr>
+                </table>
             </div>
-            <div id="diner-calc">            
+            <div id="diner-calc">
                 <table class="table-condensed text-center">
                     <tr>
                         <th scope="row">Total</th>
-                        <td>asd</td>
+                        <td>{{myTotal.total | currency: "$"}}</td>
                     </tr>
                     <tr>
                         <th scope="row">Tax</th>
-                        <td>asd</td>
+                        <td><input type="number" name="tax" ng-model="myTotal.tax" min="0" required/></td>
                     </tr>
                     <tr>
                         <th scope="row">Tip</th>
-                        <td>asd</td>
+                        <td><input type="number" name="tax" ng-model="myTotal.tip" min="0" required /></td>
                     </tr>
                     <tr>
                         <th scope="row"><h3>Grand Total</h3></th>
-                        <td><h3>asd</h3></td>
+                        <td><h3>{{myTotal.grandTotal | currency: "$"}}</h3></td>
                     </tr>
                 </table>
             </div>
