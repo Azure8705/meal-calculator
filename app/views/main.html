@@ -83,11 +83,11 @@
                     </tr>
                     <tr>
                         <th scope="row">Tax</th>
-                        <td><input type="number" name="tax" ng-model="myTotal.tax" min="0" required/></td>
+                        <td><input type="number" name="tax" ng-model="myTotal.tax" min="0" ng-change="grandTotalCalc()" required/></td>
                     </tr>
                     <tr>
                         <th scope="row">Tip</th>
-                        <td><input type="number" name="tax" ng-model="myTotal.tip" min="0" required /></td>
+                        <td><input type="number" name="tax" ng-model="myTotal.tip" min="0" ng-change="grandTotalCalc()" required /></td>
                     </tr>
                     <tr>
                         <th scope="row"><h3>Grand Total</h3></th>
